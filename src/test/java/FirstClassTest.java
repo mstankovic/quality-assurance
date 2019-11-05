@@ -1,5 +1,7 @@
 import org.junit.*;
+import org.junit.runner.RunWith;
 
+@RunWith(RetryRunner.class)
 public class FirstClassTest {
 
 
@@ -20,7 +22,8 @@ public class FirstClassTest {
 
     @Test
     public void firstMethod() {
-        System.out.println(FirstClassTest.class.getName() + " --> " + "First Test Method");
+        System.out.println("FAILED " + FirstClassTest.class.getName() + " --> " + "First Test Method");
+        assert false;
     }
 
     @After
